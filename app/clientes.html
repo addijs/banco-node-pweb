@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de clientes</title>
+  </head>
+  <style>
+    * {
+      font-family: monospace;
+    }
+    .form,
+    .conta {
+      display: flex;
+    }
+
+    .form {
+      flex-direction: column;
+    }
+
+    .form > div {
+      width: max-content;
+      margin-bottom: 10px;
+    }
+
+    .conta > div {
+      margin-right: 20px;
+    }
+
+    button {
+      width: 100px;
+      height: 30px;
+    }
+  </style>
+  <body>
+    <h1>Registro de Clientes</h1>
+
+    <div class="form">
+      <div class="nome">
+        <div class="label">
+          <label for="nome">Nome:</label>
+        </div>
+        <input id="nome" type="text" />
+      </div>
+
+      <div class="cpf">
+        <div class="label">
+          <label for="cpf">CPF:</label>
+        </div>
+        <input id="cpf" type="text" />
+      </div>
+
+      <div class="conta">
+        <div class="numero">
+          <div class="label">
+            <label for="numero">Numero:</label>
+          </div>
+          <input id="numero" type="text" />
+        </div>
+
+        <div class="saldo">
+          <div class="label">
+            <label for="saldo">Saldo:</label>
+          </div>
+          <input id="saldo" type="text" />
+        </div>
+      </div>
+
+      <button onclick="clienteController.cadastrarCliente()">
+        Cadastrar
+      </button>
+
+      <div class="show">
+        <!-- Bloco para adição de clientes -->
+      </div>
+    </div>
+    <script src="js/model/conta.js"></script>
+    <script src="js/model/cliente.js"></script>
+    <script src="js/model/clientes.js"></script>
+    <script src="js/controller/cliente-controller.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
